@@ -24,6 +24,7 @@ func NewCepHandler(cepGateway gateway.ICEPGateway, config *configs.Config) *CepH
 		config:      config,
 	}
 }
+
 func (h *CepHandler) GetCEP(w http.ResponseWriter, r *http.Request) {
 	cep := chi.URLParam(r, "cep")
 	if cep == "" {
